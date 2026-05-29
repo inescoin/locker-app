@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/dashboard/dashboard.component.css"],
+  "sourcesContent": [".contract-card {\n  padding: 0.75rem;\n  border: 1px solid #e5e7eb;\n  border-radius: 0.5rem;\n  background-color: #f9fafb;\n  transition: all 0.2s ease;\n}\n\n.contract-card:hover {\n  background-color: #f3f4f6;\n  border-color: #d1d5db;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);\n}\n"],
+  "mappings": ";AAAA,CAAC;AACC,WAAS;AACT,UAAQ,IAAI,MAAM;AAClB,iBAAe;AACf,oBAAkB;AAClB,cAAY,IAAI,KAAK;AACvB;AAEA,CARC,aAQa;AACZ,oBAAkB;AAClB,gBAAc;AACd,cAAY,EAAE,IAAI,IAAI,KAAK,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE;AACtC;",
+  "names": []
+}

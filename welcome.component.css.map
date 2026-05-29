@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/welcome/welcome.component.scss"],
+  "sourcesContent": [".animate-marquee {\n  animation: marquee 20s linear infinite;\n  display: flex;\n  width: max-content;\n}\n\n@keyframes marquee {\n  0% { transform: translateX(0); }\n  100% { transform: translateX(-50%); }\n}\n\n.pause {\n  animation-play-state: paused;\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,aAAA,QAAA,IAAA,OAAA;AACA,WAAA;AACA,SAAA;;AAGF,WALE;AAMA;AAAK,eAAA,WAAA;;AACL;AAAO,eAAA,WAAA;;;AAGT,CAAA;AACE,wBAAA;;",
+  "names": []
+}

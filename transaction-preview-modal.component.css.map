@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/modals/transaction-preview-modal/transaction-preview-modal.component.scss"],
+  "sourcesContent": [":host {\n    display: contents;\n}"],
+  "mappings": ";AAAA;AACI,WAAA;;",
+  "names": []
+}

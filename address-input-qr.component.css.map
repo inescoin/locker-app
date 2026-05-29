@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/ui/address-input-qr/address-input-qr.component.css"],
+  "sourcesContent": [".address-input-container {\n    width: 100%;\n}\n\n.address-input-container input::placeholder {\n    color: #9CA3AF;\n}"],
+  "mappings": ";AAAA,CAAC;AACG,SAAO;AACX;AAEA,CAJC,wBAIwB,KAAK;AAC1B,SAAO;AACX;",
+  "names": []
+}

@@ -1,0 +1,557 @@
+{
+    "_comment": "MAINNET DEPLOYMENT CONFIGURATION ONLY",
+    "_note": "Public RPCs here are 'no-signup'. They can be rate-limited; keep several and failover.",
+    "_usage": "Sub-contracts (PriceCalculator, ValidationHandler, etc.) are retrieved dynamically via LockerContract",
+    "chains": [
+        {
+            "chainId": 31337,
+            "name": "Hardhat Testnet",
+            "nativeSymbol": "ETH",
+            "rpcUrls": [
+                "http://localhost:8545"
+            ],
+            "wethAddress": "0x59b670e9fA9D0A427751Af201D676719a970857b",
+            "explorerUrl": "http://localhost:8545",
+            "lockerContract": {
+                "address": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+                "comment": "Hardhat local testnet locker"
+            },
+            "deploymentRegistry": {
+                "address": "0x959922bE3CAee4b8Cd9a407cc3ac1C251C2007B1",
+                "comment": "Deployed with payment system enabled"
+            },
+            "stablecoins": {
+                "USDC": {
+                    "address": "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
+                    "decimals": 6,
+                    "lockId": 2
+                },
+                "USDT": {
+                    "address": "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
+                    "decimals": 6,
+                    "lockId": 1
+                },
+                "DAI": {
+                    "address": "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+                    "decimals": 18,
+                    "lockId": 3
+                }
+            },
+            "pairs": [
+                {
+                    "name": "WETH/USDC V2",
+                    "address": "0xa85233C63b9Ee964Add6F2cffe00Fd84eb32338f",
+                    "token0": "0x59b670e9fA9D0A427751Af201D676719a970857b",
+                    "token1": "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
+                    "version": "v2",
+                    "stablecoinPosition": 2,
+                    "comment": "Testnet WETH/USDC pair"
+                }
+            ]
+        },
+        {
+            "chainId": 1337,
+            "name": "Hardhat Testnet (Legacy)",
+            "nativeSymbol": "ETH",
+            "rpcUrls": [
+                "http://localhost:8545"
+            ],
+            "wethAddress": "0x59b670e9fA9D0A427751Af201D676719a970857b",
+            "explorerUrl": "http://localhost:8545",
+            "lockerContract": {
+                "address": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+                "comment": "Same as chainId 31337 — MetaMask reports 1337 for Hardhat"
+            },
+            "deploymentRegistry": {
+                "address": "0x959922bE3CAee4b8Cd9a407cc3ac1C251C2007B1",
+                "comment": "Deployed with payment system enabled"
+            },
+            "stablecoins": {
+                "USDC": {
+                    "address": "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
+                    "decimals": 6,
+                    "lockId": 2
+                },
+                "USDT": {
+                    "address": "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
+                    "decimals": 6,
+                    "lockId": 1
+                },
+                "DAI": {
+                    "address": "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+                    "decimals": 18,
+                    "lockId": 3
+                }
+            },
+            "pairs": [
+                {
+                    "name": "WETH/USDC V2",
+                    "address": "0xa85233C63b9Ee964Add6F2cffe00Fd84eb32338f",
+                    "token0": "0x59b670e9fA9D0A427751Af201D676719a970857b",
+                    "token1": "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
+                    "version": "v2",
+                    "stablecoinPosition": 2,
+                    "comment": "Testnet WETH/USDC pair"
+                }
+            ]
+        },
+        {
+            "chainId": 1,
+            "name": "Ethereum Mainnet",
+            "nativeSymbol": "ETH",
+            "rpcUrls": [
+                "https://ethereum-rpc.publicnode.com",
+                "https://cloudflare-eth.com",
+                "https://rpc.ankr.com/eth"
+            ],
+            "wethAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+            "explorerUrl": "https://etherscan.io",
+            "lockerContract": {
+                "address": "0x4E3985bC5358dF4e3E526e006da2B6C874F43f07",
+                "comment": "Main locker contract - sub-contracts retrieved dynamically"
+            },
+            "deploymentRegistry": {
+                "address": "0xC38869B7cFc7F5ee2778A154aA4E9eEFD9B51672",
+                "comment": "Deployed with payment system enabled"
+            },
+            "stablecoins": {
+                "USDC": {
+                    "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USDT": {
+                    "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USD1": {
+                    "address": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
+                    "decimals": 18,
+                    "lockId": null
+                }
+            },
+            "pairs": [
+                {
+                    "name": "WETH/USDC V2",
+                    "address": "0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc",
+                    "token0": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                    "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                    "version": "v2",
+                    "stablecoinPosition": 1,
+                    "comment": "Uniswap V2 - USDC is token0"
+                },
+                {
+                    "name": "WETH/USDC V3 (0.05%)",
+                    "address": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+                    "token0": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+                    "token1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                    "version": "v3",
+                    "stablecoinPosition": 1,
+                    "comment": "Uniswap V3 0.05% fee - Most liquid WETH/USDC pool"
+                }
+            ]
+        },
+        {
+            "chainId": 56,
+            "name": "BNB Smart Chain",
+            "nativeSymbol": "BNB",
+            "rpcUrls": [
+                "https://bsc-rpc.publicnode.com",
+                "https://bsc-dataseed.binance.org",
+                "https://rpc.ankr.com/bsc"
+            ],
+            "wethAddress": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+            "explorerUrl": "https://bscscan.com",
+            "lockerContract": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "deploymentRegistry": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "stablecoins": {
+                "USDC": {
+                    "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+                    "decimals": 18,
+                    "lockId": null
+                },
+                "USDT": {
+                    "address": "0x55d398326f99059fF775485246999027B3197955",
+                    "decimals": 18,
+                    "lockId": null
+                },
+                "USD1": {
+                    "address": null,
+                    "decimals": 18,
+                    "lockId": null,
+                    "comment": "USD1 not verified on BSC"
+                }
+            },
+            "pairs": [
+                {
+                    "name": "WBNB/USDC V2",
+                    "address": "0xd99c7f6c65857ac913a8f880a4cb84032ab2fc5b",
+                    "token0": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+                    "token1": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                    "version": "v2",
+                    "stablecoinPosition": 1,
+                    "comment": "PancakeSwap V2 - USDC token0, WBNB token1"
+                }
+            ]
+        },
+        {
+            "chainId": 42161,
+            "name": "Arbitrum One",
+            "nativeSymbol": "ETH",
+            "rpcUrls": [
+                "https://arbitrum-one-rpc.publicnode.com",
+                "https://arb1.arbitrum.io/rpc",
+                "https://rpc.ankr.com/arbitrum"
+            ],
+            "wethAddress": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+            "explorerUrl": "https://arbiscan.io",
+            "lockerContract": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "deploymentRegistry": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "stablecoins": {
+                "USDC": {
+                    "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USDT": {
+                    "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USD1": {
+                    "address": null,
+                    "decimals": 18,
+                    "lockId": null,
+                    "comment": "USD1 not verified on Arbitrum"
+                }
+            },
+            "pairs": [
+                {
+                    "name": "WETH/USDC V3",
+                    "address": "0xC6962004f452bE9203591991D15f6b388e09E8D0",
+                    "token0": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+                    "token1": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+                    "version": "v3",
+                    "stablecoinPosition": 2,
+                    "comment": "Uniswap V3 - WETH token0, USDC token1"
+                }
+            ]
+        },
+        {
+            "chainId": 10,
+            "name": "Optimism",
+            "nativeSymbol": "ETH",
+            "rpcUrls": [
+                "https://optimism-rpc.publicnode.com",
+                "https://mainnet.optimism.io",
+                "https://rpc.ankr.com/optimism"
+            ],
+            "wethAddress": "0x4200000000000000000000000000000000000006",
+            "explorerUrl": "https://optimistic.etherscan.io",
+            "lockerContract": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "deploymentRegistry": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "stablecoins": {
+                "USDC": {
+                    "address": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USDT": {
+                    "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USD1": {
+                    "address": null,
+                    "decimals": 18,
+                    "lockId": null,
+                    "comment": "USD1 not verified on Optimism"
+                }
+            },
+            "pairs": [
+                {
+                    "name": "WETH/USDC V3 (native USDC)",
+                    "address": "0x1fb3cf6e48f1e7b10213e7b6d87d4c073c7fdb7b",
+                    "token0": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+                    "token1": "0x4200000000000000000000000000000000000006",
+                    "version": "v3",
+                    "stablecoinPosition": 1,
+                    "comment": "Uniswap V3 - USDC token0, WETH token1"
+                },
+                {
+                    "name": "WETH/USDC.e V3 (fallback)",
+                    "address": "0x85149247691df622eaf1a8bd0cafd40bc45154a9",
+                    "token0": "0x4200000000000000000000000000000000000006",
+                    "token1": "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
+                    "version": "v3",
+                    "stablecoinPosition": 2,
+                    "comment": "Uniswap V3 - USDC.e is bridged"
+                }
+            ]
+        },
+        {
+            "chainId": 8453,
+            "name": "Base",
+            "nativeSymbol": "ETH",
+            "rpcUrls": [
+                "https://base-rpc.publicnode.com",
+                "https://mainnet.base.org",
+                "https://rpc.ankr.com/base"
+            ],
+            "wethAddress": "0x4200000000000000000000000000000000000006",
+            "explorerUrl": "https://basescan.org",
+            "lockerContract": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "deploymentRegistry": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "stablecoins": {
+                "USDC": {
+                    "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USDT": {
+                    "address": "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USD1": {
+                    "address": null,
+                    "decimals": 18,
+                    "lockId": null,
+                    "comment": "USD1 not verified on Base"
+                }
+            },
+            "pairs": [
+                {
+                    "name": "WETH/USDC V3",
+                    "address": "0xd0b53D9277642d899DF5C87A3966A349A798F224",
+                    "token0": "0x4200000000000000000000000000000000000006",
+                    "token1": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+                    "version": "v3",
+                    "stablecoinPosition": 2,
+                    "comment": "Uniswap V3 - WETH token0, USDC token1"
+                }
+            ]
+        },
+        {
+            "chainId": 137,
+            "name": "Polygon",
+            "nativeSymbol": "POL",
+            "rpcUrls": [
+                "https://polygon-bor-rpc.publicnode.com",
+                "https://polygon-rpc.com",
+                "https://rpc.ankr.com/polygon"
+            ],
+            "wethAddress": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
+            "explorerUrl": "https://polygonscan.com",
+            "lockerContract": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "deploymentRegistry": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "stablecoins": {
+                "USDC": {
+                    "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USDT": {
+                    "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USD1": {
+                    "address": null,
+                    "decimals": 18,
+                    "lockId": null,
+                    "comment": "USD1 not verified on Polygon"
+                }
+            },
+            "pairs": [
+                {
+                    "name": "WETH/USDC V3",
+                    "address": "0x19C5505638383337D2972Ce68B493aD78E315147",
+                    "token0": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+                    "token1": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
+                    "version": "v3",
+                    "stablecoinPosition": 1,
+                    "comment": "Uniswap V3 - USDC token0, WETH token1"
+                }
+            ]
+        },
+        {
+            "chainId": 43114,
+            "name": "Avalanche C-Chain",
+            "nativeSymbol": "AVAX",
+            "rpcUrls": [
+                "https://avalanche-c-chain-rpc.publicnode.com",
+                "https://api.avax.network/ext/bc/C/rpc",
+                "https://rpc.ankr.com/avalanche"
+            ],
+            "wethAddress": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+            "explorerUrl": "https://snowscan.xyz",
+            "lockerContract": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "deploymentRegistry": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "stablecoins": {
+                "USDC": {
+                    "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USDT": {
+                    "address": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USD1": {
+                    "address": null,
+                    "decimals": 18,
+                    "lockId": null,
+                    "comment": "USD1 not verified on Avalanche"
+                }
+            },
+            "pairs": [
+                {
+                    "name": "WAVAX/USDC (LFJ)",
+                    "address": "0xd446eb1660f766d533beceef890df7a69d26f7d1",
+                    "token0": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+                    "token1": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+                    "version": "lfj",
+                    "stablecoinPosition": 2,
+                    "comment": "LFJ (Trader Joe) WAVAX/USDC pool"
+                }
+            ]
+        },
+        {
+            "chainId": 59144,
+            "name": "Linea",
+            "nativeSymbol": "ETH",
+            "rpcUrls": [
+                "https://linea-rpc.publicnode.com",
+                "https://rpc.linea.build",
+                "https://rpc.ankr.com/linea"
+            ],
+            "wethAddress": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+            "explorerUrl": "https://lineascan.build",
+            "lockerContract": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "deploymentRegistry": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "stablecoins": {
+                "USDC": {
+                    "address": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USDT": {
+                    "address": "0xA219439258ca9da29E9Cc4cE5596924745e12B93",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USD1": {
+                    "address": null,
+                    "decimals": 18,
+                    "lockId": null,
+                    "comment": "USD1 not verified on Linea"
+                }
+            },
+            "pairs": [
+                {
+                    "name": "WETH/USDC V3 (PancakeSwap)",
+                    "address": "0xd5539d0360438a66661148c633a9f0965e482845",
+                    "token0": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+                    "token1": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
+                    "version": "v3",
+                    "stablecoinPosition": 2,
+                    "comment": "PancakeSwap V3 Linea WETH/USDC"
+                }
+            ]
+        },
+        {
+            "chainId": 324,
+            "name": "zkSync Era",
+            "nativeSymbol": "ETH",
+            "rpcUrls": [
+                "https://mainnet.era.zksync.io",
+                "https://rpc.ankr.com/zksync_era",
+                "https://zksync-era.public-rpc.com"
+            ],
+            "wethAddress": "0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91",
+            "explorerUrl": "https://explorer.zksync.io",
+            "lockerContract": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "deploymentRegistry": {
+                "address": null,
+                "comment": "To be deployed"
+            },
+            "stablecoins": {
+                "USDC": {
+                    "address": "0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USDT": {
+                    "address": "0x493257fD37EDB34451f62EDf8D2a0C418852bA4C",
+                    "decimals": 6,
+                    "lockId": null
+                },
+                "USD1": {
+                    "address": null,
+                    "decimals": 18,
+                    "lockId": null,
+                    "comment": "USD1 not verified on zkSync"
+                }
+            },
+            "pairs": [
+                {
+                    "name": "WETH/USDC V3 (PancakeSwap)",
+                    "address": "0x7c0e7d6066af191977a4483b445b5c06fc41ecd6",
+                    "token0": "0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4",
+                    "token1": "0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91",
+                    "version": "v3",
+                    "stablecoinPosition": 1,
+                    "comment": "PancakeSwap V3 zkSync USDC/WETH"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/environments/environment.user.ts"],
+  "sourcesContent": ["export const environment = {\n  production: true,\n  isAdmin: false\n};\n"],
+  "mappings": ";AAAO,IAAM,cAAc;EACzB,YAAY;EACZ,SAAS;;",
+  "names": []
+}
